@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -57,13 +56,13 @@
       font-size: 18px;
       border: none;
       border-radius: 5px;
-      background-color: #4CAF50;
+      background-color: #FF0000;
       color: white;
       cursor: pointer;
     }
 
     button:hover {
-      background-color: #45a049;
+      background-color: #FF0000;
     }
 
     /* Mensagem de sucesso */
@@ -89,13 +88,13 @@
   <h1>Likes FF</h1>
 
   <div class="form-container">
-    <input type="text" id="userId" placeholder="Digite o ID do usuário" />
+    <input type="text" id="userId" placeholder="Digite O ID Do Usuário" />
     <button onclick="enviarLikes()">Enviar</button>
-    <div class="message" id="message">Likes enviados!</div>
+    <div class="message" id="message">Likes Enviados!</div>
   </div>
 
   <div class="footer">
-    by @luanzn_fe
+    by @Redzin
   </div>
 
   <script>
@@ -104,7 +103,7 @@
       const messageElement = document.getElementById('message');
 
       if (!userId) {
-        alert('Por favor, insira um ID válido!');
+        alert('Por Favor, Insira Um ID Válido!');
         return;
       }
 
@@ -114,12 +113,12 @@
       fetch(`https://world-ecletix.onrender.com/api/likesff?id=${userId}`)
         .then(() => {
           messageElement.style.color = 'green'; // Cor verde para sucesso
-          messageElement.textContent = 'Likes enviados com sucesso!';
+          messageElement.textContent = 'Likes Enviados Com Sucesso!';
           messageElement.style.display = 'block'; // Exibe a mensagem
         })
         .catch(() => {
           messageElement.style.color = 'red'; // Cor vermelha para erro
-          messageElement.textContent = 'Erro ao conectar com a API. Tente novamente mais tarde.';
+          messageElement.textContent = 'Erro Ao Conectar Com A API. Tente Novamente Mais Tarde.';
           messageElement.style.display = 'block'; // Exibe a mensagem
         });
     }
